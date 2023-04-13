@@ -1,0 +1,33 @@
+Faça login no PythonAnywhere e vá para o painel.
+
+Clique em "Web" e, em seguida, em "Add a new web app".
+
+Selecione "Flask" como o framework e escolha a versão do Python que você deseja utilizar.
+
+No painel "Web", vá para a seção "Code" e clique no link do arquivo "source code" (por exemplo, /home/yourusername/mysite/flask_app.py).
+
+Substitua o conteúdo do arquivo flask_app.py pelo código da sua aplicação Flask que usa a biblioteca iqoptionapi (semelhante ao exemplo fornecido na resposta anterior).
+
+Salve o arquivo e feche-o.
+
+No painel "Web", vá para a seção "Consoles" e inicie um novo console "Bash".
+Crie um novo ambiente virtual (substitua "your_virtualenv_name" pelo nome que você deseja dar ao ambiente virtual):
+bash
+mkvirtualenv --python=/usr/bin/python3.8 your_virtualenv_name
+
+Escolha a versão do Python que você deseja utilizar, substituindo "python3.8" pelo executável desejado, como "python3.7" ou "python3.10".
+
+Ative o ambiente virtual:
+bash
+source /home/yourusername/.virtualenvs/your_virtualenv_name/bin/activate
+
+(Substitua "yourusername" pelo seu nome de usuário e "your_virtualenv_name" pelo nome do ambiente virtual que você escolheu anteriormente)
+
+Instale o módulo iqoptionapi e o Flask no ambiente virtual ativado:
+bash
+pip install git+https://github.com/Lu-Yi-Hsun/iqoptionapi.git
+
+Vá para a seção "Web" no painel e na seção "Virtualenv", clique em "Enter the path to a virtualenv" e digite o caminho do ambiente virtual que você acabou de criar:
+arduino
+Copy code
+/home/yourusername/.virtualenvs/your_virtualenv_name
