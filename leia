@@ -29,5 +29,15 @@ pip install git+https://github.com/Lu-Yi-Hsun/iqoptionapi.git
 
 Vá para a seção "Web" no painel e na seção "Virtualenv", clique em "Enter the path to a virtualenv" e digite o caminho do ambiente virtual que você acabou de criar:
 arduino
-Copy code
+
 /home/yourusername/.virtualenvs/your_virtualenv_name
+
+python /home/yourusername/mysite/teste.py
+
+import time
+from iqoptionapi.stable_api import IQ_Option
+Iq=IQ_Option("email","password")
+Iq.connect()#connect to iqoption
+goal="EURUSD"
+print("get candles")
+print(Iq.get_candles(goal,60,111,time.time()))
